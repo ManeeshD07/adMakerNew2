@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdMaker</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="../static/style/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom hedd">
+      <a href="{{url_for('index')}}" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <span class="fs-4">AdMaker</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        
+        <li class="nav-item"><a href="{{url_for('about')}}" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="{{url_for('login')}}" class="nav-link active" aria-current="page">Login</a></li>
+        <!-- <li class="nav-item"><a href="#" class="nav-link">Login/Signup</a></li> -->
+        <!-- <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li> -->
+        <!-- <li class="nav-item"><a href="#" class="nav-link">About</a></li> -->
+      </ul>
+    </header>
+  </div>
+  
+  <div class="text-center sign">
+    <main class="form-signin w-100 m-auto">
+      <form method="post" action="{{url_for('signup')}}">
+        <!-- <img class="mb-4" src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
+        <h1 class="h3 mb-3 fw-normal">Sign Up</h1>
+
+        <div class="form-floating">
+          <input type="name" class="form-control" id="name" name="name" placeholder="name">
+          <label for="floatingInput">Name</label>
+        </div>
+        <br>
+        <div class="form-floating">
+          <input type="email" class="form-control" id="username" name ="username" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
+        </div>
+        <br>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+        </div>
+        <br>
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
+        <p class="mt-5 mb-3 text-muted">Aready have an account? <a href="{{url_for('login')}}">Login</a></p>
+      </form>
+    </main>
+
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+</body>
+</html>
