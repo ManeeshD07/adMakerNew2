@@ -1,1 +1,1 @@
-To access the website, visit admader.dmaneesh.tech
+To access the website, visit admaker.dmaneesh.tech
